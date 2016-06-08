@@ -20,6 +20,6 @@
   },
   "require-dev": {
     "codeclimate/php-test-reporter": "dev-master",
-    "phpunit/phpunit": "5.4.*"
+    "phpunit/phpunit": "4.8.*"
   }
 }

@@ -1,15 +1,8 @@
-engines:
-  phpcodesniffer:
-    enabled: true
-    config:
-      file_extensions: "php"
-      standard: "PSR1,PSR2"
+exclude_paths:
+  - "/tests/*"
+  - "/vendor/*"
 languages:
   PHP: true
-exclude_paths:
-  - "tests/*"
-  - "/vendor/*"
 ratings:
   paths:
   - "**.php"
-exclude_paths: []

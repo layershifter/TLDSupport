@@ -1,5 +1,5 @@
 {
-  "name": "layershifter/TLDSupport",
+  "name": "layershifter/tld-support",
   "description": "Support package for TLDDatabase and TLDExtract",
   "minimum-stability": "stable",
   "license": "Apache-2.0",

@@ -1,6 +1,15 @@
 engines:
-  fixme:
+  phpcodesniffer:
     enabled: true
+    config:
+      file_extensions: "php"
+      standard: "PSR1,PSR2"
+languages:
+  PHP: true
+exclude_paths:
+  - "tests/*"
+  - "/vendor/*"
 ratings:
-  paths: []
+  paths:
+  - "**.php"
 exclude_paths: []

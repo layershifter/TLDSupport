@@ -11,8 +11,8 @@ install:
   - composer --prefer-source install
 
 notifications:
-    email: false
+  email: false
 
 addons:
-    code_climate:
-        repo_token: 3f96e0739f5ada6c5e2aedb71278a9b1ba2db06dc139426ae8d657b0f3020308
+  code_climate:
+    repo_token: 3f96e0739f5ada6c5e2aedb71278a9b1ba2db06dc139426ae8d657b0f3020308

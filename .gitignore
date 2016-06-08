@@ -1,0 +1,7 @@
+# IDE specific
+.idea/
+
+# PHP specific
+vendor/
+composer.lock
+composer.phar

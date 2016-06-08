@@ -17,5 +17,8 @@
   "require": {
     "php": ">=5.5",
     "symfony/polyfill-mbstring": "^1.2"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "dev-master"
   }
 }

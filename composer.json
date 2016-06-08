@@ -1,0 +1,21 @@
+{
+  "name": "layershifter/TLDSupport",
+  "description": "Support package for TLDDatabase and TLDExtract",
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Alexander Fedyashov",
+      "email": "a@fedyashov.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "LayerShifter\\TLDSupport\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.5",
+    "symfony/polyfill-mbstring": "^1.2"
+  }
+}

@@ -1,6 +1,8 @@
-engines:
-  fixme:
-    enabled: true
+exclude_paths:
+  - "/tests/*"
+  - "/vendor/*"
+languages:
+  PHP: true
 ratings:
-  paths: []
-exclude_paths: []
+  paths:
+  - "**.php"

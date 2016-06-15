@@ -17,7 +17,7 @@ class Str
      * @param string       $haystack
      * @param string|array $needles
      *
-     * @return boolean
+     * @return bool
      */
     public static function endsWith($haystack, $needles)
     {
@@ -79,7 +79,7 @@ class Str
     public static function startsWith($haystack, $needles)
     {
         foreach ((array)$needles as $needle) {
-            if ($needle != '' && mb_strpos($haystack, $needle) === 0) {
+            if ($needle !== '' && mb_strpos($haystack, $needle) === 0) {
                 return true;
             }
         }

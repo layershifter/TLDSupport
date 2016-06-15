@@ -25,6 +25,8 @@
   },
   "require-dev": {
     "codeclimate/php-test-reporter": "dev-master",
-    "phpunit/phpunit": "4.8.*"
+    "phpmd/phpmd": "@stable",
+    "phpunit/phpunit": "4.8.*",
+    "squizlabs/php_codesniffer": "2.*"
   }
 }

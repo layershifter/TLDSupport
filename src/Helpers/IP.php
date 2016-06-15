@@ -25,6 +25,8 @@ class IP
      */
     public static function isValid($hostname)
     {
+        $hostname = trim($hostname);
+
         // Strip the wrapping square brackets from IPv6 addresses.
 
         if (Str::startsWith($hostname, '[') && Str::endsWith($hostname, ']')) {

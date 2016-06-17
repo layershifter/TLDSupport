@@ -86,4 +86,32 @@ class Str
 
         return false;
     }
+
+    /**
+     * Find position of first occurrence of string in a string.
+     *
+     * @param string $haystack
+     * @param string $needle
+     * @param int    $offset
+     *
+     * @return bool|int
+     */
+    public static function strpos($haystack, $needle, $offset = 0)
+    {
+        return mb_strpos($haystack, $needle, $offset, 'UTF-8');
+    }
+
+    /**
+     * Find position of last occurrence of a string in a string.
+     *
+     * @param string $haystack
+     * @param string $needle
+     * @param int    $offset
+     *
+     * @return bool|int
+     */
+    public static function strrpos($haystack, $needle, $offset = 0)
+    {
+        return mb_strrpos($haystack, $needle, $offset, 'UTF-8');
+    }
 }

@@ -12,6 +12,11 @@ class Str
 {
 
     /**
+     * @const string Encoding for strings.
+     */
+    const ENCODING = 'UTF-8';
+
+    /**
      * Determine if a given string ends with a given substring.
      *
      * @param string       $haystack
@@ -39,7 +44,7 @@ class Str
      */
     public static function length($value)
     {
-        return mb_strlen($value);
+        return mb_strlen($value, self::ENCODING);
     }
 
     /**
@@ -51,7 +56,7 @@ class Str
      */
     public static function lower($value)
     {
-        return mb_strtolower($value, 'UTF-8');
+        return mb_strtolower($value, self::ENCODING);
     }
 
     /**
@@ -65,7 +70,7 @@ class Str
      */
     public static function substr($string, $start, $length = null)
     {
-        return mb_substr($string, $start, $length, 'UTF-8');
+        return mb_substr($string, $start, $length, self::ENCODING);
     }
 
     /**
@@ -98,7 +103,7 @@ class Str
      */
     public static function strpos($haystack, $needle, $offset = 0)
     {
-        return mb_strpos($haystack, $needle, $offset, 'UTF-8');
+        return mb_strpos($haystack, $needle, $offset, self::ENCODING);
     }
 
     /**
@@ -112,6 +117,6 @@ class Str
      */
     public static function strrpos($haystack, $needle, $offset = 0)
     {
-        return mb_strrpos($haystack, $needle, $offset, 'UTF-8');
+        return mb_strrpos($haystack, $needle, $offset, self::ENCODING);
     }
 }

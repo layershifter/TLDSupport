@@ -1,6 +1,6 @@
 # TLDSupport
 
-Support package for [TLDDatabase](https://github.com/layershifter/TLDDatabase) and [TLDExtract](https://github.com/layershifter/TLDExtract). This package provides helpers for work with IP addresses and strings.
+Support package for [TLDDatabase](https://github.com/layershifter/TLDDatabase) and [TLDExtract](https://github.com/layershifter/TLDExtract). This package provides helpers for work with arrays, IP addresses, strings and more.
 
 [![Build Status](https://travis-ci.org/layershifter/TLDSupport.svg)](https://travis-ci.org/layershifter/TLDSupport) [![Code Climate](https://codeclimate.com/github/layershifter/TLDSupport/badges/gpa.svg)](https://codeclimate.com/github/layershifter/TLDSupport) [![Test Coverage](https://codeclimate.com/github/layershifter/TLDSupport/badges/coverage.svg)](https://codeclimate.com/github/layershifter/TLDSupport/coverage) [![PHP 7 ready](http://php7ready.timesplinter.ch/layershifter/TLDSupport/master/badge.svg)](https://travis-ci.org/layershifter/TLDSupport})
 
@@ -19,19 +19,29 @@ The following versions of PHP are supported.
 
 ## Usage
 
+### Arrays:
+```php
+mixed Arr::first(array $haystack, null|callable $callback, mixed $default);
+mixed Arr::last(array $haystack, null|callable $callback, mixed $default);
+```
 ### IP addresses:
 ```php
 bool IP::isValid(string $hostname);
 ```
 ### Strings:
 ```php
-bool Str::endsWith(string $haystack, string|array $needles);
-int Str::length(string $value);
-string Str::lower(string $value);
-string Str::substr(string $string, int $start, int|null $length = null);
-bool Str::startsWith(string $haystack, string|array $needles);
+bool     Str::endsWith(string $haystack, string|array $needles);
+int      Str::length(string $value);
+string   Str::lower(string $value);
+string   Str::substr(string $string, int $start, int|null $length = null);
+bool     Str::startsWith(string $haystack, string|array $needles);
+bool|int Str::strpos(string $haystack, string $needles, int $offset = 0);
+bool|int Str::strrpos(string $haystack, string $needles, int $offset = 0);
 ```
-
+### Mixed:
+```php
+mixed Mixed::value(mixed $value);
+```
 ## Install
 
 Via Composer

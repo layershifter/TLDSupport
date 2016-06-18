@@ -1,4 +1,12 @@
 <?php
+/**
+ * TLDSupport: Support package for TLDDatabase and TLDExtract.
+ *
+ * @link      https://github.com/layershifter/TLDSupport
+ *
+ * @copyright Copyright (c) 2016, Alexander Fedyashov
+ * @license   https://raw.githubusercontent.com/layershifter/TLDSupport/master/LICENSE Apache 2.0 License
+ */
 
 namespace LayerShifter\TLDSupport\Tests\Helpers;
 
@@ -82,5 +90,33 @@ class StrTest extends \PHPUnit_Framework_TestCase
         self::assertFalse(Str::startsWith('jason', 'day'));
         self::assertFalse(Str::startsWith('jason', ['day']));
         self::assertFalse(Str::startsWith('jason', ''));
+    }
+
+    /**
+     * Test for strpos() method.
+     *
+     * @return void
+     */
+    public function testStrPos()
+    {
+        self::assertEquals(6, Str::strpos('БГДЖИЛЁ', 'Ё'));
+        self::assertEquals(0, Str::strpos('БГДЖИЛЁ', 'Б'));
+        self::assertEquals(0, Str::strpos('ЁБГДЖИЛЁ', 'Ё'));
+        self::assertEquals(2, Str::strpos('БГДЖИЛЁД', 'Д'));
+        self::assertFalse(Str::strpos('БГДЖИЛЁ', 'П'));
+    }
+
+    /**
+     * Test for strrpos() method.
+     *
+     * @return void
+     */
+    public function testStrRPos()
+    {
+        self::assertEquals(6, Str::strrpos('БГДЖИЛЁ', 'Ё'));
+        self::assertEquals(0, Str::strrpos('БГДЖИЛЁ', 'Б'));
+        self::assertEquals(7, Str::strrpos('ЁБГДЖИЛЁ', 'Ё'));
+        self::assertEquals(7, Str::strrpos('БГДЖИЛЁД', 'Д'));
+        self::assertFalse(Str::strrpos('БГДЖИЛЁ', 'П'));
     }
 }
